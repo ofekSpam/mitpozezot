@@ -7,14 +7,14 @@ on:
       limit: 10
       force: true
       filterOutputs:
-        title: 1
-        contentSnippet: 1
-        link: 1
-        pubDate: 0
-        content: 0
-        guid: 0
-        categories: 0
-        isoDate: 0
+        title: true
+        contentSnippet: true
+        link: true
+        pubDate: false
+        content: false
+        guid: false
+        categories: false
+        isoDate: false
 
 jobs:
   telegram:
@@ -44,6 +44,5 @@ jobs:
            
            #isoDate: ${{on.rss.outputs.isoDate}}
            
-           
-           format: markdown
+         format: markdown
 
