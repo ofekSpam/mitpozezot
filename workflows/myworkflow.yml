@@ -2,7 +2,9 @@ name: Send email new RSS Feed items
 
 on:
   rss:
-    url: https://rsshub.app/telegram/channel/mitpozezot
+    url: 
+      - https://rsshub.app/telegram/channel/mitpozezot
+      - https://www.buzzfeed.com/world.xml
   config:
     limit: 10
 
