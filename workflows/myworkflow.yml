@@ -25,5 +25,5 @@ jobs:
           message: |
             ${{on.rss.outputs.contentSnippet}}
             
-            S{{ on.rss.outputs.pubDate }}
+            ${{ on.rss.outputs.pubDate }}
            
