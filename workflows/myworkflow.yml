@@ -22,8 +22,8 @@ jobs:
           token: ${{ secrets.TELEGRAM_DUMMY_BOT_TOKEN }}
           message: |
                      
-           contentSnippet: ${{on.rss.outputs.contentSnippet}}
+            contentSnippet: ${{on.rss.outputs.contentSnippet}}
            
-           [קישור להודעה בערוץ הטלגרם שלנו](${{on.rss.outputs.link}})
-         
-         format: markdown
+            [קישור להודעה בערוץ הטלגרם שלנו](${{on.rss.outputs.link}})
+          
+          format: markdown
