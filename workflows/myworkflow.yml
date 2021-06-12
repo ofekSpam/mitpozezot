@@ -10,11 +10,11 @@ on:
         title: true
         contentSnippet: true
         link: true
-        pubDate: false
-        content: false
-        guid: false
-        categories: false
-        isoDate: false
+        #pubDate: false
+        #content: false
+        #guid: false
+        #categories: false
+        #isoDate: false
 
 jobs:
   telegram:
