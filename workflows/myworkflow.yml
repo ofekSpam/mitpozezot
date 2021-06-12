@@ -1,0 +1,24 @@
+name: Send a telegram message to test everything works fine
+
+name: Send email new RSS Feed items	
+on:
+  rss:
+    url: https://rsshub.app/telegram/channel/mitpozezot
+  config:
+    limit: 10
+
+jobs:
+  telegram:
+    name: Send a telegram message html
+    runs-on: ubuntu-latest
+    steps:    
+      - name: Send a telegram message html
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_DUMMY_BOT_TOKEN }}
+          message: |
+           title: ${{on.rss.outputs.title}}
+           contentSnippet: ${{on.rss.outputs.contentSnippet}}
+           link: ${{on.rss.outputs.link}
+          format: markdown
