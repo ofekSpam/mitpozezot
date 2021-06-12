@@ -1,6 +1,5 @@
-name: Send a telegram message to test everything works fine
-
 name: Send email new RSS Feed items	
+
 on:
   rss:
     url: https://rsshub.app/telegram/channel/mitpozezot
