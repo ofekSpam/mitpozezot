@@ -4,11 +4,12 @@ on:
   rss:
     url: https://rsshub.app/telegram/channel/mitpozezot
     config:
-      limit: 2
-      force: true
+      limit: 5
+      force: false
       filterOutputs:
         contentSnippet: true
         link: true
+        pubDate: true
 
 jobs:
   telegram:
@@ -23,4 +24,6 @@ jobs:
           format: markdown
           message: |
             ${{on.rss.outputs.contentSnippet}}
+            
+            S{{ on.rss.outputs.pubDate }}
            
