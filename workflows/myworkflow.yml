@@ -7,14 +7,8 @@ on:
       limit: 10
       force: true
       filterOutputs:
-        title: true
         contentSnippet: true
         link: true
-        #pubDate: false
-        #content: false
-        #guid: false
-        #categories: false
-        #isoDate: false
 
 jobs:
   telegram:
@@ -27,19 +21,9 @@ jobs:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_DUMMY_BOT_TOKEN }}
           message: |
-          
-           title: ${{on.rss.outputs.title}}
-           
+                     
            contentSnippet: ${{on.rss.outputs.contentSnippet}}
            
-           link: ${{on.rss.outputs.link}}
-           
-           #pubDate: ${{on.rss.outputs.pubDate}}
-           
-           #content: ${{on.rss.outputs.content}}
-                      
-           #guid: ${{on.rss.outputs.guid}}
-           
-           #categories: ${{on.rss.outputs.categories}}
-           
-           #isoDate: ${{on.rss.outputs.isoDate}}
+           [קישור להודעה בערוץ הטלגרם שלנו](${{on.rss.outputs.link}})
+         
+         format: markdown
