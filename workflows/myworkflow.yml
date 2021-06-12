@@ -20,10 +20,8 @@ jobs:
         with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_DUMMY_BOT_TOKEN }}
+          format: markdown
           message: |
-                     
-            contentSnippet: ${{on.rss.outputs.contentSnippet}}
+            ${{on.rss.outputs.contentSnippet}}
            
             [קישור להודעה בערוץ הטלגרם שלנו](${{on.rss.outputs.link}})
-          
-          format: markdown
