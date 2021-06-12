@@ -4,8 +4,17 @@ on:
   rss:
     url: https://rsshub.app/telegram/channel/mitpozezot
     config:
-      limit: 3
+      limit: 10
       force: true
+      filterOutputs:
+        title: 1
+        contentSnippet: 1
+        link: 1
+        pubDate: 0
+        content: 0
+        guid: 0
+        categories: 0
+        isoDate: 0
 
 jobs:
   telegram:
@@ -25,17 +34,15 @@ jobs:
            
            link: ${{on.rss.outputs.link}}
            
-           pubDate: ${{on.rss.outputs.pubDate}}
+           #pubDate: ${{on.rss.outputs.pubDate}}
            
-           content: ${{on.rss.outputs.content}}
+           #content: ${{on.rss.outputs.content}}
+                      
+           #guid: ${{on.rss.outputs.guid}}
            
-           contentSnippet: ${{on.rss.outputs.contentSnippet}}
+           #categories: ${{on.rss.outputs.categories}}
            
-           guid: ${{on.rss.outputs.guid}}
-           
-           categories: ${{on.rss.outputs.categories}}
-           
-           isoDate: ${{on.rss.outputs.isoDate}}
+           #isoDate: ${{on.rss.outputs.isoDate}}
            
            
            format: markdown
