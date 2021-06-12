@@ -12,3 +12,4 @@ jobs:
         with:
           args: clean
           json-secrets: ${{ toJSON(secrets) }}
+
