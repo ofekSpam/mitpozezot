@@ -4,9 +4,9 @@ name: Send telegram message new RSS Feed items
 
 on:
   rss:
-    url: https://rsshub.app/telegram/channel/mitpozezot
+    url: https://rsshub.app/twitter/user/alerttrade
     config:
-      limit: 20
+      limit: 10
       force: false
       filterOutputs:
         contentSnippet: true
@@ -21,7 +21,7 @@ jobs:
       - name: Send a telegram message html
         uses: appleboy/telegram-action@master
         with:
-          to: ${{ secrets.TELEGRAM_TO }}
+          to: ${{ secrets.TELEGRAM_TO_ME }}
           token: ${{ secrets.TELEGRAM_DUMMY_BOT_TOKEN }}
           format: markdown
           message: |
