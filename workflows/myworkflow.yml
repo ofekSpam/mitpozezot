@@ -2,9 +2,10 @@ name: Send email new RSS Feed items
 
 on:
   rss:
-    url: https://rsshub.app/telegram/channel/tweetsolidit
-  config:
-    limit: 10
+    url: https://rsshub.app/telegram/channel/mitpozezot
+    config:
+      limit: 3
+      force: true
 
 jobs:
   telegram:
@@ -17,8 +18,25 @@ jobs:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_DUMMY_BOT_TOKEN }}
           message: |
+          
            title: ${{on.rss.outputs.title}}
+           
            contentSnippet: ${{on.rss.outputs.contentSnippet}}
+           
            link: ${{on.rss.outputs.link}}
-          format: markdown
+           
+           pubDate: ${{on.rss.outputs.pubDate}}
+           
+           content: ${{on.rss.outputs.content}}
+           
+           contentSnippet: ${{on.rss.outputs.contentSnippet}}
+           
+           guid: ${{on.rss.outputs.guid}}
+           
+           categories: ${{on.rss.outputs.categories}}
+           
+           isoDate: ${{on.rss.outputs.isoDate}}
+           
+           
+           format: markdown
 
