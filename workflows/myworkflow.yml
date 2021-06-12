@@ -43,6 +43,3 @@ jobs:
            #categories: ${{on.rss.outputs.categories}}
            
            #isoDate: ${{on.rss.outputs.isoDate}}
-           
-         format: markdown
-
