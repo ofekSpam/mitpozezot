@@ -4,7 +4,7 @@ on:
   rss:
     url: https://rsshub.app/telegram/channel/mitpozezot
     config:
-      limit: 1
+      limit: 2
       force: true
       filterOutputs:
         contentSnippet: true
