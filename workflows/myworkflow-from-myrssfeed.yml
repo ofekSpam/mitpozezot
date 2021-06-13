@@ -27,10 +27,10 @@ jobs:
           to: ${{ secrets.TELEGRAM_TO_ME }}
           token: ${{ secrets.TELEGRAM_DUMMY_BOT_TOKEN }}
           format: markdown
-          message: |
-            ${{ on.rss.outputs.creator }}
-            
+          message: |            
             ${{on.rss.outputs.contentSnippet}}
             
             ${{ on.rss.outputs.pubDate }}
            
+           מקור:
+            ${{ on.reddit.outputs.link }}
