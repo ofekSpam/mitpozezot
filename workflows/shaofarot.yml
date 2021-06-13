@@ -9,11 +9,11 @@ on:
       force: true
       sort: 
         id: -1
-      filterOutputs:
-        contentSnippet: true
-        link: true
-        pubDate: true
-        dc:creator: true
+      #filterOutputs:
+        #contentSnippet: true
+        #link: true
+        #pubDate: true
+        #dc:creator: true
 
 jobs:
   telegram:
@@ -28,7 +28,7 @@ jobs:
           format: markdown
           message: |            
 
-            ${{ on.rss.outputs.dc:creator }}
+            ${{ on.rss.outputs.creator }}
             
             ${{on.rss.outputs.contentSnippet}}
             
