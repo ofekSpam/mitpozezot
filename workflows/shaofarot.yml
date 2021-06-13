@@ -2,14 +2,10 @@ name: Send telegram message new RSS Feed items
 
 on:
   rss:
-    url: 
-      #- https://rsshub.app/twitter/user/riklin10
-      #- https://rsshub.app/twitter/user/bardugojacob
-      - https://rsshub.app/twitter/user/topazluk
-      
+    url: http://www.rssmix.com/u/13062168/rss.xml 
     config:
       active: true
-      limit: 9
+      limit: 50
       force: true
       sort: 
         id: -1
@@ -18,7 +14,6 @@ on:
         link: true
         pubDate: true
         author: true
-      resultsPerWorkFLow: 3
 
 jobs:
   telegram:
@@ -33,7 +28,7 @@ jobs:
           format: markdown
           message: |            
 
-            ${{ on.rss.outputs.author }}
+            🧨 ${{ on.rss.outputs.author }}:
             
             ${{on.rss.outputs.contentSnippet}}
             
