@@ -4,7 +4,7 @@ on:
   rss:
     url: https://rsshub.app/twitter/user/bardugojacob
     config:
-      active: false
+      active: true
       limit: 3
       force: true
       sort: 
@@ -13,6 +13,8 @@ on:
         contentSnippet: true
         link: true
         pubDate: true
+      resultsPerWorkFLow: 3
+
 
 jobs:
   telegram:
