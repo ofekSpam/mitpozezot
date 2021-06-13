@@ -4,7 +4,7 @@ on:
   rss:
     url: https://rsshub.app/twitter/user/bardugojacob
     config:
-      active: true
+      active: false
       limit: 3
       force: true
       sort: 
