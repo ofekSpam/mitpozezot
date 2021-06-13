@@ -28,7 +28,7 @@ jobs:
           format: markdown
           message: |            
 
-            🧨 ${{ on.rss.outputs.author }}:
+            ${{ on.rss.outputs.author }}
             
             ${{on.rss.outputs.contentSnippet}}
             
