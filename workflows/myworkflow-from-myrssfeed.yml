@@ -33,4 +33,4 @@ jobs:
             ${{ on.rss.outputs.pubDate }}
            
             מקור:
-            ${{ on.reddit.outputs.link }}
+            ${{ on.rss.outputs.link }}
