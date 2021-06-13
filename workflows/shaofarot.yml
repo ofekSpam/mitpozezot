@@ -5,7 +5,7 @@ on:
     url: http://www.rssmix.com/u/13062168/rss.xml 
     config:
       active: true
-      limit: 5
+      limit: 0
       force: true
       sort: 
         id: -1
@@ -31,8 +31,6 @@ jobs:
             ${{ on.rss.outputs.creator }}
             
             ${{on.rss.outputs.contentSnippet}}
-            
-            ${{ on.rss.outputs.pubDate }}
-           
+                       
             מקור:
             ${{ on.rss.outputs.link }}
