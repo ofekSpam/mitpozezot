@@ -2,10 +2,14 @@ name: Send telegram message new RSS Feed items riklin10
 
 on:
   rss:
-    url: https://rsshub.app/twitter/user/riklin10
+    url: 
+      - https://rsshub.app/twitter/user/riklin10
+      - https://rsshub.app/twitter/user/bardugojacob
+      - https://rsshub.app/twitter/user/topazluk
+      
     config:
       active: true
-      limit: 3
+      limit: 9
       force: true
       sort: 
         id: -1
@@ -28,8 +32,7 @@ jobs:
           token: ${{ secrets.TELEGRAM_DUMMY_BOT_TOKEN }}
           format: markdown
           message: |            
-            שמעון ריקלין:
-            
+
             ${{ on.rss.outputs.author }}
             
             ${{on.rss.outputs.contentSnippet}}
