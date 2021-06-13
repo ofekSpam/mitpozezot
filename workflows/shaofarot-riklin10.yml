@@ -30,7 +30,7 @@ jobs:
           message: |            
             שמעון ריקלין:
             
-            ${{ on.rss.outputs.dc:creator }}
+            ${{ on.rss.outputs['dc:creator'] }}
             
             ${{on.rss.outputs.contentSnippet}}
             
