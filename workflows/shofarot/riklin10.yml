@@ -2,8 +2,7 @@ name: Send telegram message new RSS Feed items riklin10
 
 on:
   rss:
-    url: 
-      - https://rsshub.app/twitter/user/riklin10
+    url: https://rsshub.app/twitter/user/riklin10
 
     config:
       active: true
