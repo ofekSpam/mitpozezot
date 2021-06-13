@@ -4,7 +4,7 @@ name: Send telegram message new RSS Feed items {{ shofar }}
 
 on:
   rss:
-    url: https://rsshub.app/twitter/user/{{ shofar }}
+    url: https://rsshub.app/twitter/user/{{ shofar }}/
     config:
       active: true
       limit: 3
