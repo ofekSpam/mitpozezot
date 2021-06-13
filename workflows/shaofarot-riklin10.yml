@@ -13,7 +13,7 @@ on:
         contentSnippet: true
         link: true
         pubDate: true
-        dc:creator: true
+        author: true
       resultsPerWorkFLow: 3
 
 jobs:
@@ -30,7 +30,7 @@ jobs:
           message: |            
             שמעון ריקלין:
             
-            ${{ on.rss.outputs['dc:creator'] }}
+            ${{ on.rss.outputs.author }}
             
             ${{on.rss.outputs.contentSnippet}}
             
