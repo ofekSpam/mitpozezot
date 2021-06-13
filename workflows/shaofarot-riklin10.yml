@@ -1,10 +1,10 @@
 shofar: riklin10
 
-name: Send telegram message new RSS Feed items {{ shofar }}
+name: Send telegram message new RSS Feed items ${{ shofar }}
 
 on:
   rss:
-    url: https://rsshub.app/twitter/user/{{ shofar }}/
+    url: https://rsshub.app/twitter/user/${{ shofar }}
     config:
       active: true
       limit: 3
@@ -18,7 +18,7 @@ on:
 
 jobs:
   telegram:
-    name: Send a telegram message html {{ shofar }}
+    name: Send a telegram message html ${{ shofar }}
     runs-on: ubuntu-latest
     steps:    
       - name: Send a telegram message html
