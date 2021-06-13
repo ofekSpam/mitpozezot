@@ -32,5 +32,5 @@ jobs:
             
             ${{ on.rss.outputs.pubDate }}
            
-           מקור:
+            מקור:
             ${{ on.reddit.outputs.link }}
