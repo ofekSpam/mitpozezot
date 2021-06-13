@@ -9,6 +9,7 @@ on:
       - https://rsshub.app/twitter/user/bardugojacob
       - https://rsshub.app/twitter/user/topazluk
     config:
+      active: false
       limit: 3
       force: true
       filterOutputs:
