@@ -4,7 +4,7 @@ on:
   rss:
     url: https://rsshub.app/twitter/user/topazluk
     config:
-      active: false
+      active: true
       limit: 3
       force: true
       sort: 
@@ -13,6 +13,7 @@ on:
         contentSnippet: true
         link: true
         pubDate: true
+      resultsPerWorkFLow: 3
 
 jobs: 
   telegram:
