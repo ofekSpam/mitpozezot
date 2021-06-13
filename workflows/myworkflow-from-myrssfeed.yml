@@ -28,7 +28,7 @@ jobs:
           token: ${{ secrets.TELEGRAM_DUMMY_BOT_TOKEN }}
           format: markdown
           message: |
-            ${{on.rss.outputs.title}}
+            ${{on.rss.outputs.author}}
             
             ${{on.rss.outputs.contentSnippet}}
             
