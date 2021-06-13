@@ -4,9 +4,12 @@ name: Send telegram message new RSS Feed items
 
 on:
   rss:
-    url: https://rsshub.app/twitter/user/alerttrade
+    url: 
+      - https://rsshub.app/twitter/user/riklin10
+      - https://rsshub.app/twitter/user/bardugojacob
+      - https://rsshub.app/twitter/user/topazluk
     config:
-      limit: 10
+      limit: 50
       force: false
       filterOutputs:
         contentSnippet: true
