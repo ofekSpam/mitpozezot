@@ -1,0 +1,37 @@
+shofar: riklin10
+
+name: Send telegram message new RSS Feed items {{ shofar }}
+
+on:
+  rss:
+    url: https://rsshub.app/twitter/user/{{ shofar }}
+    config:
+      active: true
+      limit: 3
+      force: true
+      sort: 
+        id: -1
+      filterOutputs:
+        contentSnippet: true
+        link: true
+        pubDate: true
+
+jobs:
+  telegram:
+    name: Send a telegram message html {{ shofar }}
+    runs-on: ubuntu-latest
+    steps:    
+      - name: Send a telegram message html
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_TO_ME }}
+          token: ${{ secrets.TELEGRAM_DUMMY_BOT_TOKEN }}
+          format: markdown
+          message: |            
+            שמעון ריקלין:
+            ${{on.rss.outputs.contentSnippet}}
+            
+            ${{ on.rss.outputs.pubDate }}
+           
+            מקור:
+            ${{ on.rss.outputs.link }}
