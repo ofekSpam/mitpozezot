@@ -14,8 +14,10 @@ on:
         link: true
         pubDate: true
 
-jobs:
+jobs: 
   telegram:
+    container:
+      image: act-Send-teleg-1
     name: Send a telegram message html topazluk
     runs-on: ubuntu-latest
     steps:    
