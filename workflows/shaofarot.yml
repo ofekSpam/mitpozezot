@@ -1,4 +1,4 @@
-name: Send telegram message new RSS Feed items riklin10
+name: Send telegram message new RSS Feed items 
 
 on:
   rss:
@@ -22,7 +22,7 @@ on:
 
 jobs:
   telegram:
-    name: Send a telegram message html riklin10
+    name: Send a telegram message html 
     runs-on: ubuntu-latest
     steps:    
       - name: Send a telegram message html
