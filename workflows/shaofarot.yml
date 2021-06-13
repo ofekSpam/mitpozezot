@@ -5,7 +5,7 @@ on:
     url: http://www.rssmix.com/u/13062168/rss.xml 
     config:
       active: true
-      limit: 50
+      limit: 20
       force: true
       sort: 
         id: -1
@@ -13,7 +13,7 @@ on:
         contentSnippet: true
         link: true
         pubDate: true
-        author: true
+        dc:creator: true
 
 jobs:
   telegram:
@@ -28,7 +28,7 @@ jobs:
           format: markdown
           message: |            
 
-            ${{ on.rss.outputs.author }}
+            ${{ on.rss.outputs.dc:creator }}
             
             ${{on.rss.outputs.contentSnippet}}
             
