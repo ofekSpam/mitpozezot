@@ -9,7 +9,7 @@ on:
       - https://rsshub.app/twitter/user/bardugojacob
       - https://rsshub.app/twitter/user/topazluk
     config:
-      limit: 30
+      limit: 3
       force: true
       filterOutputs:
         contentSnippet: true
@@ -24,7 +24,7 @@ jobs:
       - name: Send a telegram message html
         uses: appleboy/telegram-action@master
         with:
-          to: ${{ secrets.TELEGRAM_TO_ME }}
+          to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_DUMMY_BOT_TOKEN }}
           format: markdown
           message: |            
