@@ -5,7 +5,7 @@ on:
     url: http://www.rssmix.com/u/13062168/rss.xml 
     config:
       active: true
-      limit: 20
+      limit: 5
       force: true
       sort: 
         id: -1
@@ -25,7 +25,7 @@ jobs:
         with:
           to: ${{ secrets.TELEGRAM_TO_ME }}
           token: ${{ secrets.TELEGRAM_DUMMY_BOT_TOKEN }}
-          format: markdown
+          format: html
           message: |            
 
             ${{ on.rss.outputs.creator }}
