@@ -5,8 +5,8 @@ on:
     url: http://www.rssmix.com/u/13062168/rss.xml 
     config:
       active: true
-      limit: 0
-      force: true
+      limit: 50
+      force: false
       sort: 
         id: -1
       #filterOutputs:
