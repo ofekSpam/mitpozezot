@@ -28,7 +28,7 @@ jobs:
           token: ${{ secrets.TELEGRAM_DUMMY_BOT_TOKEN }}
           format: markdown
           message: |            
-            שמעון ריקלין:
+            יעקב ברדוגו:
             ${{on.rss.outputs.contentSnippet}}
             
             ${{ on.rss.outputs.pubDate }}
