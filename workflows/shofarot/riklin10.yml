@@ -17,7 +17,7 @@ on:
 
 jobs:
   telegram:
-    name: Send a telegram message html
+    name: Send a telegram message html riklin10
     runs-on: ubuntu-latest
     steps:    
       - name: Send a telegram message html
