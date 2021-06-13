@@ -29,7 +29,7 @@ jobs:
           token: ${{ secrets.TELEGRAM_DUMMY_BOT_TOKEN }}
           format: markdown
           message: |            
-            שמעון ריקלין:
+            טופז לוק:
             ${{on.rss.outputs.contentSnippet}}
             
             ${{ on.rss.outputs.pubDate }}
