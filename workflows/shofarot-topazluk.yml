@@ -4,7 +4,7 @@ on:
   rss:
     url: https://rsshub.app/twitter/user/topazluk
     config:
-      active: true
+      active: false
       limit: 3
       force: true
       sort: 
