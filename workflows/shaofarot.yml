@@ -7,8 +7,8 @@ on:
       active: true
       limit: 30
       force: false
-      #sort: 
-        #id: -1
+      sort: 
+        id: -1
       #filterOutputs:
         #contentSnippet: true
         #link: true
