@@ -1,10 +1,10 @@
 name: Send telegram message new RSS Feed items 
 on:
   rss:
-    url: http://www.rssmix.com/u/13062168/rss.xml 
+    url: https://www.reddit.com/r/listentothis/new
     config:
       active: true
-      limit: 25
+      limit: 1
       force: false
       sort: 
         id: -1
@@ -16,17 +16,10 @@ jobs:
       - name: Send a telegram message html
         uses: appleboy/telegram-action@master
         with:
-          to: ${{ secrets.TELEGRAM_TO }}
+          to: ${{ secrets.TELEGRAM_ID_OR_CHANNEL }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
-          format: html
-          message: |            
-
-            <a>${{ on.rss.outputs.creator }}</a>
-            
-            <a>${{on.rss.outputs.contentSnippet}}</a>
-             
-            <a>מקור:</a>
-            <a>${{ on.rss.outputs.link }}</a> 
+          content-url: ${{ on.reddit.outputs.thumbnail }}
+          parse_mode: html
                    
       - name: Sleep for 4 seconds
         run: sleep 4s
