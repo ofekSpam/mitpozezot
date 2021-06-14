@@ -5,7 +5,7 @@ on:
     url: http://www.rssmix.com/u/13062168/rss.xml 
     config:
       active: true
-      limit: 30
+      limit: 25
       force: false
       sort: 
         id: -1
