@@ -6,7 +6,7 @@ on:
     config:
       active: true
       limit: 50
-      force: false
+      force: true
       #sort: 
         #id: -1
       #filterOutputs:
