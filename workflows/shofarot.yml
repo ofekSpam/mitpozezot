@@ -5,8 +5,8 @@ on:
     url: http://www.rssmix.com/u/13062168/rss.xml 
     config:
       active: true
-      limit: 25
-      force: false
+      limit: 2
+      force: true
       sort: 
         id: -1
       #filterOutputs:
@@ -32,8 +32,7 @@ jobs:
             
             <a>${{on.rss.outputs.contentSnippet}}</a>
                        
-            <a>מקור:</a>
-            <a>${{ on.rss.outputs.link }}</a>
+            <a href="${{ on.rss.outputs.link }}"> מקור: </a>
       
       - name: Sleep for 4 seconds
         run: sleep 4s
