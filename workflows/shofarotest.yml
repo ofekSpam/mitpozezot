@@ -14,7 +14,7 @@ jobs:
       id: send_notifications
       uses: danilat/externalized-telegram-notifications-action@master
       with:
-        to: ${{ secrets.TELEGRAM_ID_OR_CHANNEL }}
+        to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
         content-url: ${{ on.reddit.outputs.thumbnail }}
         parse_mode: html
