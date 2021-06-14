@@ -28,12 +28,12 @@ jobs:
           format: html
           message: |            
 
-            ${{ on.rss.outputs.creator }}
+            <p>${{ on.rss.outputs.creator }}</p>
             
-            ${{on.rss.outputs.contentSnippet}}
+            <p>${{on.rss.outputs.contentSnippet}}</p>
                        
             <p>מקור:</p>
-            ${{ on.rss.outputs.link }}
+            <p>${{ on.rss.outputs.link }}</p>
       
       - name: Sleep for 3 seconds
         run: sleep 3s
