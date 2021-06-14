@@ -32,7 +32,7 @@ jobs:
             
             ${{on.rss.outputs.contentSnippet}}
                        
-            מקור:
+            <p>מקור:</p>
             ${{ on.rss.outputs.link }}
       
       - name: Sleep for 3 seconds
