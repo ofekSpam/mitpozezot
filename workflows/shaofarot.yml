@@ -5,7 +5,7 @@ on:
     url: http://www.rssmix.com/u/13062168/rss.xml 
     config:
       active: true
-      limit: 18
+      limit: 20
       force: false
       #sort: 
         #id: -1
@@ -34,3 +34,7 @@ jobs:
                        
             מקור:
             ${{ on.rss.outputs.link }}
+      
+      - name: Sleep for 3 seconds
+        run: sleep 3s
+        shell: bash
