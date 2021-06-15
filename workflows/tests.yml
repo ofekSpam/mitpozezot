@@ -6,7 +6,7 @@ on:
     url: https://rssbox.herokuapp.com/twitter/2331117414/CantorsParadise?exclude_replies=1&with_media=1 
     config:
       active: true
-      limit: 2
+      limit: 4
       force: true
       sort: 
         id: -1
