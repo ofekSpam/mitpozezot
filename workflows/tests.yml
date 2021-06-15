@@ -4,7 +4,7 @@ on:
   rss:
     url: https://rssbox.herokuapp.com/twitter/1136566956/Riklin10?exclude_replies=1 
     config:
-      active: true
+      active: false
       limit: 2
       force: true
       sort: 
