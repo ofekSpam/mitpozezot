@@ -9,24 +9,24 @@ on:
       active: true
 jobs:
   telegram:
-    - name: send a telegram message
-      runs-on: ubuntu-latest
-      steps:
-        - name: send a telegram message html
-          uses: appleboy/telegram-action@master
-          with:
-            to: ${{ TELEGRAM_TO }}
-            token: ${{ TELEGRAM_TOKEN }}
-            format: html
-            message: | 
-              <a>TEST</a>
+    name: send a telegram message
+    runs-on: ubuntu-latest
+    steps:
+      - name: send a telegram message html
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ TELEGRAM_TO }}
+          token: ${{ TELEGRAM_TOKEN }}
+          format: html
+          message: | 
+            <a>TEST</a>
 
-              <a>${{ on.rss.outputs.creator }}</a>
+            <a>${{ on.rss.outputs.creator }}</a>
 
-              <a>${{on.rss.outputs.contentSnippet}}</a>
+            <a>${{on.rss.outputs.contentSnippet}}</a>
 
-              <a>מקור:</a>
-              <a>${{ on.rss.outputs.link }}</a> 
+            <a>מקור:</a>
+            <a>${{ on.rss.outputs.link }}</a> 
 
     - name: Sleep for 4 seconds
       run: sleep 4s
