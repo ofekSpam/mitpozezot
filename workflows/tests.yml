@@ -2,7 +2,8 @@ name: Do some tests
 
 on:
   rss:
-    url: https://rssbox.herokuapp.com/twitter/2331117414/CantorsParadise?exclude_replies=1&with_media=1 #not shofarot 
+#not shofarot 
+    url: https://rssbox.herokuapp.com/twitter/2331117414/CantorsParadise?exclude_replies=1&with_media=1 
     config:
       active: true
       limit: 2
