@@ -9,7 +9,7 @@ on:
           $not:
             $regex: Re
       active: true
-      limit: 25
+      limit: 200
       force: false
       sort: 
         id: -1
