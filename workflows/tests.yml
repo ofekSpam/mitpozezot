@@ -5,6 +5,8 @@ on:
     url: https://rssbox.herokuapp.com/twitter/1136566956/Riklin10?exclude_replies=1
     config:
       limit: 3
+      force: true
+      active: true
 jobs:
   telegram:
     - name: send a telegram message
