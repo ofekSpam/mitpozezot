@@ -25,6 +25,6 @@ jobs:
             <a>מקור:</a>
             <a>${{ on.rss.outputs.link }}</a> 
 
-      - name: Sleep for 4 seconds
-        run: sleep 4s
-        shell: bash
+    - name: Sleep for 4 seconds
+      run: sleep 4s
+      shell: bash
