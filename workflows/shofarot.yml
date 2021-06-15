@@ -2,7 +2,7 @@ name: Send telegram message new RSS Feed items
 
 on:
   rss:
-    url: http://www.rssmix.com/u/13066331/rss.xml 
+    url: http://www.rssmix.com/u/13062168/rss.xml 
     config:
       active: true
       limit: 25
