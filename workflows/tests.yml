@@ -22,7 +22,7 @@ jobs:
           format: html
           message: |
             <a>TEST</a>
-            <a>${{ on.rss.outputs.creator }}</a>
+            <a>${{ on.rss.outputs.author }}</a>
             
             <a>${{on.rss.outputs.contentSnippet}}</a>
              
