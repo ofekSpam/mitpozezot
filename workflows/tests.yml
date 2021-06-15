@@ -1,15 +1,13 @@
 name: Do some tests 
 
 on:
-  rss:
-#not shofarot 
-    url: https://rssbox.herokuapp.com/twitter/2331117414/CantorsParadise?exclude_replies=1&with_media=1 
+  reddit:
+    url: https:www.reddit.com/r/listentothis/new/ 
     config:
       active: true
       limit: 4
       force: true
-      sort: 
-        id: -1
+
 jobs:
   telegram:
     name: Send a telegram message 
