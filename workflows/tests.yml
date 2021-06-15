@@ -1,3 +1,5 @@
+name: Do some tests
+
 on:
   rss:
     url: https://rssbox.herokuapp.com/twitter/1136566956/Riklin10?exclude_replies=1
@@ -8,22 +10,21 @@ jobs:
     - name: send a telegram message
       runs-on: ubuntu-latest
       steps:
-        name: send a telegram message (html)
-        uses: appleboy/telegram-action@master
-        with:
-          to: ${{ TELEGRAM_TO }}
-          token: ${{ TELEGRAM_TOKEN }}
-          format: html
-          message: | 
-          
-            <a>TEST</a>
-            
-            <a>${{ on.rss.outputs.creator }}</a>
+        - name: send a telegram message html
+          uses: appleboy/telegram-action@master
+          with:
+            to: ${{ TELEGRAM_TO }}
+            token: ${{ TELEGRAM_TOKEN }}
+            format: html
+            message: | 
+              <a>TEST</a>
 
-            <a>${{on.rss.outputs.contentSnippet}}</a>
+              <a>${{ on.rss.outputs.creator }}</a>
 
-            <a>מקור:</a>
-            <a>${{ on.rss.outputs.link }}</a> 
+              <a>${{on.rss.outputs.contentSnippet}}</a>
+
+              <a>מקור:</a>
+              <a>${{ on.rss.outputs.link }}</a> 
 
     - name: Sleep for 4 seconds
       run: sleep 4s
