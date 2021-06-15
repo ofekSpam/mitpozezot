@@ -2,33 +2,26 @@ name: Do some tests
 
 on:
   rss:
-    url: https://rssbox.herokuapp.com/twitter/1136566956/Riklin10?exclude_replies=1 
+    url: https://rssbox.herokuapp.com/twitter/2331117414/CantorsParadise?exclude_replies=1&with_media=1 #not shofarot 
     config:
-      active: false
+      active: true
       limit: 2
       force: true
       sort: 
         id: -1
 jobs:
   telegram:
-    name: Send a telegram message html 
+    name: Send a telegram message 
     runs-on: ubuntu-latest
     steps:    
-      - name: Send a telegram message html
+      - name: Send a telegram photo
         uses: appleboy/telegram-action@master
         with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
           format: html
-          message: |
-            <a>TEST</a>
-            <a>${{ on.rss.outputs.author }}</a>
-            
-            <a>${{on.rss.outputs.contentSnippet}}</a>
-             
-            <a>מקור:</a>
-            <a>${{ on.rss.outputs.link }}</a> 
-                   
+          photo: https://www.pngfind.com/pngs/m/137-1375182_bouncer-github-octodex-github-octocat-hd-png-download.png
+          
       - name: Sleep for 4 seconds
         run: sleep 4s
         shell: bash
