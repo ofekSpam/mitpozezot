@@ -7,10 +7,10 @@ on:
       filter:
         title:
           $not:
-            $regex: Re
+            $regex: Re @
       active: true
       limit: 200
-      force: false
+      force: true
       sort: 
         id: -1
 jobs:
