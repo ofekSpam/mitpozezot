@@ -4,7 +4,7 @@ on:
   reddit:
     url: https:www.reddit.com/r/listentothis/new/ 
     config:
-      active: true
+      active: false
       limit: 4
       force: true
 
@@ -18,8 +18,10 @@ jobs:
         with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
-          env:
-            photo: https://www.pngfind.com/pngs/m/137-1375182_bouncer-github-octodex-github-octocat-hd-png-download.png
+          message: |
+            [Hi there](https://www.pngfind.com/pngs/m/137-1375182_bouncer-github-octodex-github-octocat-hd-png-download.png)
+          format: markdown
+          
 #      - name: Sleep for 4 seconds
 #        run: sleep 4s
 #        shell: bash
