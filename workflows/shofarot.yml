@@ -2,14 +2,14 @@ name: Send telegram message new RSS Feed items
 
 on:
   rss:
-    url: http://www.rssmix.com/u/13062168/rss.xml 
+    url: http://feed.informer.com/digests/PJMNT8CAJX/feeder 
     config:
       filter:
         title:
           $not:
             $regex: Re @
       active: true
-      limit: 200
+      limit: 2
       force: false
       sort: 
         id: -1
