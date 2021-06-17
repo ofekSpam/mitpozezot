@@ -25,12 +25,12 @@ jobs:
           token: ${{ secrets.TELEGRAM_TOKEN }}
           format: html
           message: |            
-            <a>${{ on.rss.outputs.source }}</a>
+            <a>${{ on.rss.outputs.source.title }}</a>
             
-            <a>${{ on.rss.outputs.title }}</a>
+#            <a>${{ on.rss.outputs.title }}</a>
              
-            <a>מקור:</a>
-            <a>${{ on.rss.outputs.link }}</a> 
+#            <a>מקור:</a>
+#            <a>${{ on.rss.outputs.link }}</a> 
                    
       - name: Sleep for 4 seconds
         run: sleep 4s
