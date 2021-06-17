@@ -2,7 +2,7 @@ name: Send telegram message new RSS Feed items
 
 on:
   rss:
-    url: http://feed.informer.com/digests/PJMNT8CAJX/feeder 
+    url: http://feed.informer.com/digests/PJMNT8CAJX/feeder.atom
     config:
       filter:
         title:
@@ -25,7 +25,7 @@ jobs:
           token: ${{ secrets.TELEGRAM_TOKEN }}
           format: html
           message: |            
-            <a>${{ on.rss.outputs.source.text }}</a>
+            <a>${{ on.rss.outputs.source.title }}</a>
             
             <a>${{on.rss.outputs.title}}</a>
              
