@@ -25,9 +25,9 @@ jobs:
           token: ${{ secrets.TELEGRAM_TOKEN }}
           format: html
           message: |            
-            <a>${{ on.rss.outputs.creator }}</a>
+            <a>${{ on.rss.outputs.source.__text }}</a>
             
-            <a>${{on.rss.outputs.contentSnippet}}</a>
+            <a>${{on.rss.outputs.title}}</a>
              
             <a>מקור:</a>
             <a>${{ on.rss.outputs.link }}</a> 
